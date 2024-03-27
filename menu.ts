@@ -1,13 +1,28 @@
 import * as readlineSync from 'readline-sync';
-import { Conta } from "./src/model/conta";
+import { Conta } from "./src/model/Conta";
+import { ContaCorrente } from './src/model/ContaCorrente';
+import { ContaPoupanca } from './src/model/ContaPoupanca';
 
 export function main() {
 
     let opcao: number;
-    let c1: Conta = new Conta(1, 123, 1, 'Christian Alvim', 1000000);
-    c1.depositar(1000)
-    c1.sacar(40000)
-    while (true) {
+    // let c1: Conta = new Conta(1, 123, 1, 'Christian Alvim', 1000000);
+    // c1.depositar(1000)
+    // c1.sacar(40000)
+    let cc1 : ContaCorrente = new ContaCorrente(2, 345, 9,"Christian salgado", 8000, 2000);
+    cc1.sacar(2200)
+    cc1.visualizar()
+    cc1.depositar(4000)
+        cc1.visualizar()
+    const cp1: ContaPoupanca = new ContaPoupanca(1, 34,2,"tite", 4321, 19)
+    cp1.visualizar();
+    cp1.sacar(200);
+    cp1.visualizar();
+    cp1.depositar(1000);
+    cp1.visualizar()
+
+
+   
 
         console.log("*****************************************************");
         console.log("                                                     ");
@@ -77,7 +92,7 @@ export function main() {
         }
     }
 
-}
+
 
 /* Função com os dados da pessoa desenvolvedora */
 
