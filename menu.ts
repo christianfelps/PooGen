@@ -2,10 +2,16 @@ import * as readlineSync from 'readline-sync';
 import { Conta } from "./src/model/Conta";
 import { ContaCorrente } from './src/model/ContaCorrente';
 import { ContaPoupanca } from './src/model/ContaPoupanca';
+import { ContaController } from './src/controller/ContaController';
 
 export function main() {
 
     let opcao: number;
+
+    let contas: ContaController = new ContaController();
+
+    let cc2: ContaCorrente = new ContaCorrente(2, 456, 1, 'CHRISTIAN', 10000, 1222);
+    contas.cadastrar(cc2)
     // let c1: Conta = new Conta(1, 123, 1, 'Christian Alvim', 1000000);
     // c1.depositar(1000)
     // c1.sacar(40000)
