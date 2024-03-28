@@ -1,4 +1,5 @@
-export class Conta{
+// Classe Abstrata para outras herdarem
+export abstract class Conta{
     // Atributos da Classe
     private _numero: number;
     private _agencia: number;
